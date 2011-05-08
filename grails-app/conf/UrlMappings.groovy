@@ -8,7 +8,7 @@ class UrlMappings {
         }
         "/people/$id/edit"(controller: 'people', action: 'edit')
 
-		"/"(view:"/index")
+		"/"(controller: 'pages', action: 'home')
 		"500"(view:'/error')
 	}
 }
