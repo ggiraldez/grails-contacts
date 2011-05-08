@@ -25,13 +25,7 @@ class BootStrap {
         //
         // Marshallers registration
         //
-        JSON.registerObjectMarshaller(Person) { p ->
-            def result = [:]
-            ['id', 'version', 'firstName', 'lastName', 'email', 'phone'].each { key ->
-                result[key] = p[key]
-            }
-            return result
-        }
+        JSON.registerObjectMarshaller(Person, Person.&JsonMarshaller)
     }
 
     def destroy = {

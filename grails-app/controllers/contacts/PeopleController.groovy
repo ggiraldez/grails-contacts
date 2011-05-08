@@ -6,7 +6,7 @@ class PeopleController {
 
     static allowedMethods = [
         index: 'GET', create: 'GET', save: 'POST',
-        show: 'GET', edit: 'GET', update: 'PUT', delete: 'DELETE'
+        show: 'GET', edit: 'GET', update: 'PUT', destroy: 'DELETE'
     ]
 
     def index = { 
@@ -34,8 +34,8 @@ class PeopleController {
         render "update ${params.id}"
     }
     
-    def delete = {
-        render "delete ${params.id}"
+    def destroy = {
+        render "destroy ${params.id}"
     }
     
 }

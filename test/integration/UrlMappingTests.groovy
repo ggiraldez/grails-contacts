@@ -9,7 +9,7 @@ class UrlMappingTests extends GrailsUrlMappingsTestCase {
         assertForwardUrlMapping '/people/new', controller: 'people', action: 'create'
 
         // these cannot be tested due to a bug in GrailsUrlMappingsTestCase
-        // nevertheless, they work as expected
+        // nevertheless, they work as expected -- GRAILS-3608
         //assertForwardUrlMapping '/people/1', controller: 'people', action: 'show'
         //assertForwardUrlMapping '/people/1/edit', controller: 'people', action: 'edit'
     }

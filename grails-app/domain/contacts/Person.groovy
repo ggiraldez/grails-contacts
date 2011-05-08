@@ -13,13 +13,19 @@ class Person {
         lastName  nullable: false, blank: false, maxSize: 30
         email     nullable: false, blank: false, unique: true, email: true
         phone     nullable: true, maxSize: 20
-        birthday  nullable: true, validator: {
-            return it == null || it < new Date()
-        }
+        birthday  nullable: true, validator: { it < new Date() }
     }
 
     String toString() {
         "<Person: ${firstName} ${lastName}>"
+    }
+
+    static def JsonMarshaller(Person p) {
+        def result = [:]
+        "id version firstName lastName email phone".split(/\s+/).each { key ->
+            result[key] = p[key]
+        }
+        return result
     }
 }
 

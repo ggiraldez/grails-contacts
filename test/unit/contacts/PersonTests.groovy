@@ -57,9 +57,15 @@ class PersonTests extends GrailsUnitTestCase {
         assertFalse person.validate()
     }
     
-    void testPhoneField() {
+    void testPhoneFieldSize() {
         def person = new Person(validAttrs)
         person.phone = '9' * 21
+        assertFalse person.validate()
+    }
+
+    void testBirthdayMustBeBeforeToday() {
+        def person = new Person(validAttrs)
+        person.birthday = new Date() + 1
         assertFalse person.validate()
     }
 }
