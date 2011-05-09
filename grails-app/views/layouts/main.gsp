@@ -7,9 +7,14 @@
         <link rel="shortcut icon" href="${resource(dir:'images',file:'favicon.ico')}" type="image/x-icon" />
         <script>
         dojoConfig = {
+            isDebug: true,
+            parseOnLoad: true,
             modulePaths: {
-                contacts: '../../contacts'
-            }
+                contacts: "../../contacts"
+            },
+            services: {
+                contacts: "${createLink(controller: 'people')}",
+            },
         };
         </script>
         <script src="${resource(dir: 'js/dojo-release-1.6.0-src/dojo', file: 'dojo.js')}"></script>
@@ -18,7 +23,9 @@
     <body>
         <div id="container">
             <header>
-                <img id="logo" src="${resource(dir:'images', file:'rolodex64.png')}" alt="Logo"/>
+                <img id="logo" width="64" height="64"
+                     src="${resource(dir:'images', file:'rolodex64.png')}"
+                     alt="Logo"/>
                 <h1>Contacts Manager</h1>
             </header>
             <div id="content">
