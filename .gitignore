@@ -2,4 +2,6 @@ stacktrace.log
 *.swp
 *~
 target/*
+web-app/js/dojo-release-1.6.0-src
+
 

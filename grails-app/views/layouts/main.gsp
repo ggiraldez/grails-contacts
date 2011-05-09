@@ -2,10 +2,17 @@
 <html>
     <head>
         <title><g:layoutTitle default="Contacts Manager" /></title>
-        <blueprint:resources plugins="buttons, fancytype"/>
+        <blueprint:resources plugins="buttons, fancy-type"/>
         <link rel="stylesheet" href="${resource(dir:'css',file:'main.css')}" />
         <link rel="shortcut icon" href="${resource(dir:'images',file:'favicon.ico')}" type="image/x-icon" />
-        <g:javascript library="dojo" />
+        <script>
+        dojoConfig = {
+            modulePaths: {
+                contacts: '../../contacts'
+            }
+        };
+        </script>
+        <script src="${resource(dir: 'js/dojo-release-1.6.0-src/dojo', file: 'dojo.js')}"></script>
         <g:layoutHead />
     </head>
     <body>

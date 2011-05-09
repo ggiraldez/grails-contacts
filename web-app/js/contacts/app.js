@@ -1,0 +1,3 @@
+dojo.provide('contacts.app');
+
+
