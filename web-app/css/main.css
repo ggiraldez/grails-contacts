@@ -33,4 +33,34 @@ header h1 {
 div#content {
 }
 
+form label {
+  width: 120px;
+  display: inline-block;
+}
+
+.error ul {
+  margin-bottom: 0;
+}
+
+.fieldError label {
+  color: #8A1F11;
+}
+
+.fieldError input, .fieldError select {
+  border-color: #8a1f11;
+  background-color: #FBE3E4;
+}
+
+.fields p + p {
+  text-indent: 0;
+}
+
+.actions a {
+  font-size: 120%;
+  margin-right: 10px;
+}
+
+.actions input {
+  margin-right: 10px;
+}
 

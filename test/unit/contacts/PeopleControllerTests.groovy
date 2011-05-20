@@ -20,7 +20,9 @@ class PeopleControllerTests extends ControllerUnitTestCase {
         super.tearDown()
     }
 
-    void testIndex() {
+    void testIndexJson() {
+        controller.request.format = 'json'
+        //
         controller.index()
         //
         assertEquals 200, controller.response.status
