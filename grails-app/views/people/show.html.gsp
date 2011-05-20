@@ -7,21 +7,21 @@
 <body>
   <h1>Contact</h1>
 
-  <div class="fields">
+  <div class="person">
     <p>
-      First Name: ${person.firstName}
+      <span>First Name:</span> <b>${person.firstName}</b>
     </p>
     <p>
-      Last Name: ${person.lastName}
+      <span>Last Name:</span> <b>${person.lastName}</b>
     </p>
     <p>
-      Email: ${person.email}
+      <span>Email:</span> <b>${person.email}</b>
     </p>
     <p>
-      Phone Number: ${person.phone}
+      <span>Phone Number:</span> <b>${person.phone}</b>
     </p>
     <p>
-      Birthday: <g:formatDate date="${person.birthday}" formatName="birthday.date.format"/>
+      <span>Birthday:</span> <b><g:formatDate date="${person.birthday}" formatName="birthday.date.format"/></b>
     </p>
   </div>
 

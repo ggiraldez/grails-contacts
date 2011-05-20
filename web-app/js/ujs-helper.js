@@ -3,7 +3,7 @@ dojo.require('dojox.NodeList.delegate');
 dojo.ready(function() {
 
   dojo.query('body').delegate('a[data-method="delete"]', 'onclick', function(evt) {
-    evt.preventDefault();
+    dojo.stopEvent(evt);
     var prompt = dojo.attr(this, 'data-confirm');
     if (prompt && confirm(prompt)) {
       var form = dojo.create('form', { method: 'post', action: this.href });

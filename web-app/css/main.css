@@ -33,6 +33,12 @@ header h1 {
 div#content {
 }
 
+
+
+/**
+ * Styles for bare layout
+ */
+
 form label {
   width: 120px;
   display: inline-block;
@@ -51,16 +57,32 @@ form label {
   background-color: #FBE3E4;
 }
 
-.fields p + p {
-  text-indent: 0;
-}
-
 .actions a {
-  font-size: 120%;
+  font-size: 110%;
   margin-right: 10px;
+  padding: 2px 6px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  text-decoration: none;
 }
 
 .actions input {
   margin-right: 10px;
+}
+
+table.contacts tbody td {
+  cursor: pointer;
+}
+
+table.contacts tbody tr:hover td {
+  background-color: #ff9900;
+}
+
+.person {
+  font-size: 110%;
+}
+
+.person p + p {
+  text-indent: 0;
 }
 

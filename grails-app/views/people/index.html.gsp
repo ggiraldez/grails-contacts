@@ -3,6 +3,7 @@
   <head>
   <title>Contacts list</title>
   <meta name="layout" content="bare"/>
+  <g:javascript src="bare-people.js"/>
 </head>
 <body>
   <h1>Contacts</h1>
@@ -16,7 +17,7 @@
     </thead>
     <tbody>
     <g:each in="${people}" var="person">
-      <tr>
+      <tr data-id="${person.id}" data-link="${createLink(action: 'show', id: person.id)}">
         <td>${person.firstName}</td>
         <td>${person.lastName}</td>
         <td><g:link action="show" id="${person.id}">${person.email}</g:link></td>
