@@ -7,23 +7,7 @@
 <body>
   <h1>Contact</h1>
 
-  <div class="person">
-    <p>
-      <span>First Name:</span> <b>${person.firstName}</b>
-    </p>
-    <p>
-      <span>Last Name:</span> <b>${person.lastName}</b>
-    </p>
-    <p>
-      <span>Email:</span> <b>${person.email}</b>
-    </p>
-    <p>
-      <span>Phone Number:</span> <b>${person.phone}</b>
-    </p>
-    <p>
-      <span>Birthday:</span> <b><g:formatDate date="${person.birthday}" formatName="birthday.date.format"/></b>
-    </p>
-  </div>
+  <g:render template="person" bean="${person}" var="person"/>
 
   <div class="actions">
     <g:link action="edit" id="${person.id}">Edit</g:link>

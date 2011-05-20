@@ -46,7 +46,10 @@ class PeopleController {
         def person = Person.get(params.id)
         if (person) {
             withFormat {
-                html person: person
+                html {
+                    def people = Person.list()
+                    render view: 'index', model: [ people: people, person: person ]
+                }
             }
         } else {
             render404()

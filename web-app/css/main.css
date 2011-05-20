@@ -1,43 +1,50 @@
 body {
-    background-color: #8da6d9;
-    height: 100%;
+  background-color: #8da6d9;
+  height: 100%;
 }
 
-#container {
-    margin: 20px 40px;
-    padding: 20px;
-    background-color: white;
-    height: 100%;
-    border: 1px solid black;
-    min-height: 400px;
+#frame {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 10px;
+  background-color: white;
+  height: 100%;
+  border: 1px solid black;
+  min-height: 400px;
+  width: 960px;
 }
 
 header {
-    background-color: #ddd;
-    padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 10px;
+  background-color: #ddd;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 header #logo {
-    float: left;
-    margin-right: 20px;
+  float: left;
+  margin-right: 20px;
+  padding: 10px;
 }
 
 header h1 {
-    padding-top: 10px;
-    font-size: 40px;
-    font-weight: bold;
+  padding: 20px 10px;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 0;
 }
-
-div#content {
-}
-
 
 
 /**
  * Styles for bare layout
  */
+
+.bare #container {
+}
 
 form label {
   width: 120px;
@@ -64,6 +71,7 @@ form label {
   border: 1px solid #ccc;
   border-radius: 2px;
   text-decoration: none;
+  background-color: white;
 }
 
 .actions input {
@@ -78,6 +86,18 @@ table.contacts tbody tr:hover td {
   background-color: #ff9900;
 }
 
+table.contacts tbody tr.current td {
+  background: #ffcc7f;
+}
+
+div.current {
+  background: #ffcc7f;
+  padding: 3px 20px 3px 5px;
+  border-radius: 5px;
+  z-index: 10;
+  position: absolute;
+}
+
 .person {
   font-size: 110%;
 }
@@ -85,4 +105,29 @@ table.contacts tbody tr:hover td {
 .person p + p {
   text-indent: 0;
 }
+
+#contact-detail {
+  background: #ffcc7f;
+  border-radius: 10px;
+  position: relative;
+  padding: 20px;
+}
+
+.close-button {
+  float: right;
+  margin-right: -5px;
+  margin-top: -5px;
+}
+
+.close-button img {
+  padding: 1px;
+}
+
+.close-button img:hover {
+  padding: 0;
+  border: 1px solid #888;
+  border-radius: 2px;
+  background-color: white;
+}
+
 

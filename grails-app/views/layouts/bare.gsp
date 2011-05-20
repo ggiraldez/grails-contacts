@@ -21,10 +21,12 @@
     <g:javascript src="ujs-helper.js"/>
     <g:layoutHead />
   </head>
-  <body>
-    <div id="container">
-      <div id="content">
-        <g:render template="/shared/flash"/> 
+  <body class="bare">
+    <div id="frame">
+      <div id="container">
+        <div class="span-24">
+          <g:render template="/shared/flash"/> 
+        </div>
         <g:layoutBody />
       </div>
     </div>

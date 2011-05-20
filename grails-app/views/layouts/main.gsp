@@ -21,14 +21,14 @@
         <g:layoutHead />
     </head>
     <body>
-        <div id="container">
-            <header>
-                <img id="logo" width="64" height="64"
-                     src="${resource(dir:'images', file:'rolodex64.png')}"
-                     alt="Logo"/>
-                <h1>Contacts Manager</h1>
-            </header>
-            <div id="content">
+        <div id="frame">
+            <div id="container">
+                <header class="span-24">
+                    <img id="logo" width="64" height="64"
+                         src="${resource(dir:'images', file:'rolodex64.png')}"
+                         alt="Logo"/>
+                    <h1>Contacts Manager</h1>
+                </header>
                 <g:layoutBody />
             </div>
         </div>

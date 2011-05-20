@@ -11,9 +11,9 @@
         </script>
     </head>
     <body>
-        <h1>Contact List</h1>
+        <h1 class="span-24">Contact List</h1>
 
-        <table id="contacts-list">
+        <table id="contacts-list" class="span-24">
         	<thead>
                 <th>First name</th>
                 <th>Last name</th>
